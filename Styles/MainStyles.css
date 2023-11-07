@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400&family=Lato:wght@300;400&family=Oswald:wght@200;300;400&display=swap');
+
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Anton', sans-serif;
+
+*/
+
+:root {
+
+	--white: rgb(228, 228, 228);
+	--lightred: rgb(208, 0, 0);
+	--darkRed: rgb(126, 0, 0);
+	--darkGray: rgb(22, 22, 22);
+	--mediumGray: rgb(70, 70, 70);
+	--lightGray: rgb(104, 104, 104);
+	--yellow: rgb(255, 200, 0);
+	--orange: rgb(255, 157, 0);
+	--black: black;
+	--darkBlue: rgb(0, 53, 114);
+	--lightBlue: rgb(0, 88, 187);
+
+	--font_Inter: 'Inter', sans-serif;
+	--font_Lato: 'Lato', sans-serif;
+	--font_Oswald: 'Oswald', sans-serif;
+	--font_Anton: 'Anton', sans-serif;
+
+	--marginSmall: 2%;
+
+
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--black);
+	margin: 1px;
+}
+
+
+
+nav a {
+	text-align: center;
+}
+
+
+
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--font_Oswald);
+	color: var(--white);
+	text-shadow: 1px 1px var(--black);
+	font-weight: normal;
+	text-decoration: none;
+	margin: 0px;
+}
+
+p {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	color: var(--white);
+}
+
+label {
+	font-family: var(--font_Oswald);
+	text-shadow: 1px 1px var(--black);
+}
+
+i{
+	color: var(--white);
+}
+
+footer {
+	background-color: var(--mediumGray);
+	max-width: 100%;
+	height: 100%;
+	
+	
+}
+
+footer * {
+	font-family: var(--font_Lato);
+	 color: var(--white);
+	text-decoration: none;
+}
+
+footer p {
+	grid-column: 1/3;
+}
+
+footer a:hover {
+	color: var(--lightBlue);
+
+}
+
+footer img {
+	max-width: 30px;
+}
+
+
+input[type=file] {
+	background-color: var(--lightGray);
+	color: var(--black);
+	padding: 2%;
+}
+
+input[type=file]::file-selector-button {
+
+	border-radius: 0px;
+	border: none;
+	height: 100%;
+
+}
+
+input[type=submit] {
+	background-color: var(--orange);
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: fit;
+	text-align: center;
+	border: none;
+}
+
+input[type=submit]:hover {
+	background-color: var(--yellow);
+
+}
+
+.AlertBox {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.AlertBox p {
+	display: block;
+	width: 50%;
+	background-color: var(--orange);
+	color: var(--black);
+	text-align: center;
+	padding: 2%;
+	border: 2px solid var(--darkGray);
+	font-family: var(--font_Oswald);
+	text-decoration: underline;
+
+}
+
+.cke_chrome{
+	border: 2px solid var(--white);
+}
+
+.cke_top{
+    background-color: var(--darkGray) !important ;
+	box-shadow: 1px 1px black;
+}
+
+.cke_top *{
+	color: white !important;
+
+}
+
+.CommentSection {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.Comment {
+	display: grid;
+	grid-template-columns: 80% 20%;
+	align-items: center;
+
+
+	color: var(--white);
+
+	font-family: 'Oswald';
+
+}
+
+.Comment img {
+	width: 60px;
+	border: 1px solid var(--white);
+	aspect-ratio: 1/1;
+	object-fit: cover;
+
+}
+
+.Comment:nth-child(even) {
+	background-color: var(--darkGray);
+}
+
+.Comment:nth-child(odd) {
+	background-color: var(--mediumGray);
+}
+
+.CommentUserSection {
+	display: grid;
+	grid-template-columns: 100%;
+	justify-items: center;
+	font-size: 70%;
+	text-align: center;
+	border: 1px solid var(--darkGray);
+
+}
+
+.CommentText {
+	margin-left: 2%;
+	margin-top: 1%;
+	height: 100%;
+}
+
+.DownloadButton {
+	
+	background-color: var(--orange);
+	color: var(--black);
+	font-family: var(--font_Anton);
+	text-decoration: none;
+	padding: 0.5%;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 1%;
+
+}
+
+.DownloadButton:hover{
+	color: black;
+	background-color: var(--yellow);
+	cursor: pointer;
+}
+
+.defaultBox {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	border: 1px solid var(--darkGray);
+	width: 100%;
+	background-color: var(--black);
+	padding: 1%;
+
+}
+
+#defaultBoxTitle {
+	font-family: var(--font_Lato);
+	color: var(--white);
+	background-color: var(--darkRed);
+	width: 100%;
+   	margin-top: 0px;
+  	margin-left: 0px;
+}
+
+#defaultBoxText {
+	width: 90%;
+	margin: 5%;
+	color: var(--white);
+	font-family: Calibri;
+	text-align: justify;
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.defaultButton {
+	background-color: var(--lightBlue);
+	width: 100px;
+	padding: 0.5%;
+	border-radius: 2px;
+	margin: 1%;
+	cursor: pointer;
+
+	text-align: center;
+	color: var(--white);
+	font-family: 'Oswald', sans-serif;
+
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+.defaultButton:hover {
+	background-color: var(--darkBlue);
+}
+
+.DropdownMenu{
+	display: flex;
+    flex-direction: column;
+    justify-items: center;
+    grid-template-columns: auto auto;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+}
+
+.FormBox {
+	display: grid;
+	justify-items: center;
+	width: 100%;
+	max-width: 100%;
+	padding: 1%;
+	background-color: rgb(15, 15, 15);
+	border-top: 1px solid var(--black);
+	animation-name: fadeIn;
+	animation-duration: 1s;
+}
+.FormBox form{
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.FormBox label{
+	color: var(--white)
+}
+
+
+.Formulario {
+	display: grid;
+	grid-template-columns: 100%;
+	justify-content: center;
+
+	background-color: var(--darkGray);
+	width: 80%;
+	padding: 2%;
+	margin: 1%;
+	color: var(--white);
+
+}
+
+.Formulario input, select {
+	background-color: var(--white);
+	border-radius: 5px;
+	border: 1px solid var(--lightGray);
+	height: 25px;
+	text-align: left;
+	font-family: var(--font_Inter);
+
+}
+
+
+
+.Formulario textarea {
+	background-color: var(--white);
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+
+}
+
+.Formulario button {
+	font-family: 'Oswald', sans-serif;
+
+}
+
+.Formulario h2 {
+	font-family: 'Lato', sans-serif;
+	color: var(--darkGray);
+}
+
+
+
+#fileSelector .input-file {
+	display: hidden;
+}
+
+
+.ImgSelectBox {
+	display: flex;
+	gap: 10%;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
+
+#imgPreview {
+	height: 100px;
+	max-width: 100px;
+	border: 2px solid var(--lightGray);
+	aspect-ratio: 1/1;
+	object-fit: cover;
+
+}
+
+
+
+#logo {
+	width: 100px;
+	height: 30px;
+}
+
+.LoginButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+	text-align: center;	
+	border-radius: 5px;
+	padding: 0%;
+	margin: 0px;
+	
+	
+	border: 1px solid var(--lightGray);
+	border-radius: 3px;
+
+	font-size: 80%;
+}
+
+.LoginButton img{
+	max-width: 30px;
+	max-height: 30px;
+	border-radius: 50%;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+
+.LoginButton:hover{
+	background-color: var(--lightGray);
+	cursor: pointer;
+	
+}
+
+.Main {
+	
+	animation-name: fadeIn;
+	animation-duration: 1s;
+}
+
+
+
+.MainBanner{
+	display: flex;
+	height:15rem;
+	width:100%;
+}
+
+.MainNewsBox{
+	text-align: left;
+	background-image: url(../Img/banner.png);
+	background-position: top;
+	background-size: cover;	
+}
+
+.MainNewsBox a {
+	margin-left: 1%;
+}
+
+.MainNewsTitle{
+	font-family: var(--font_Anton);
+	color: var(--white);
+	text-shadow: 1px 1px var(--black);
+	font-weight: normal;
+	text-decoration: none;
+	margin-left: var(--marginSmall);
+}
+
+.MainNewsEpigraph{
+	padding-left: 1%;
+	color: var(--yellow);
+	background: linear-gradient(90deg, var(--lightred) 0%, var(--darkRed) 80%, transparent 100%);
+	padding: 0.5%;
+	font-size: 140%;
+}
+
+.MainNewsText{
+	margin-left: var(--marginSmall);
+}
+
+.NavigationBox {
+	background-color: var(--darkGray);
+	padding-bottom: 1%;
+	padding-top: 1%;
+
+}
+
+.NavigationButton {
+	background-color: var(--darkGray);
+	color: rgb(247, 247, 247);
+	font-family: var(--font_Oswald);
+	text-decoration: none;
+	padding: 0.5%;
+	margin: 1%;
+	border: 1px solid var(--lightGray);
+	border-radius: 5px;
+
+}
+
+.NavigationButton:hover {
+	background-color: var(--lightGray);
+	color: var(--white);
+}
+
+.NewsBox{
+	background-image: url('../Img/ZombiePC.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 2px solid var(--darkBlue);
+
+}
+
+.NewsBox *{
+	text-align: left;
+}
+
+.NewsBox div{
+	height:100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#profileImg {
+	height: 40px;
+	width: 40px;
+	object-fit: cover;
+	border-radius: 2px;
+	border: 1px solid var(--white);
+}
+
+
+
+.PostBody {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	background-color: rgb(55, 55, 55);
+	border: 1px solid var(--black);
+	width: 99%;
+}
+
+.PostContent {
+	color: var(--white);
+	width: 100%;
+	text-align: justify;
+	font-family: var(--font_Lato);	
+}
+
+.PostContent > div:first-of-type{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.PostContent h2{
+	background-color: var(--darkGray);
+}
+
+.PostsTable {
+	background-color: var(--darkGray);
+	width:100%;
+	font-family: sans-serif;
+	border: 1px solid var(--darkGray);
+	border-collapse: collapse;
+	
+	
+}
+.PostsTable table{
+	width: 100%;
+	font-size: auto;
+	
+}
+
+.PostsTable *{
+	margin: 0px;
+}
+
+.PostsTable td, th{
+	text-align: center;
+	padding: 2%;
+}
+
+
+.PostsTable tr{
+	display: flex;
+	align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.PostsTable tr:hover{
+	background-color: var(--lightGray);
+	text-decoration: underline
+}
+
+.PostsTable img{
+	width: 30px
+}
+
+.PostItem {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-row: 10%;
+	font-family: 'Oswald';
+	align-items: center;
+}
+
+.PostItem:hover{
+	text-decoration: underline;
+}
+
+.PostItem .defaultBox {
+	height: 100%;
+	justify-content: center;
+}
+
+.PostItem:nth-child(even) {
+	background-color: var(--mediumGray)
+}
+
+.PostItem:nth-child(odd) {
+	background-color: var(--darkGray)
+}
+
+.PostUser {
+	display: grid;
+	grid-template-columns: 40% 60%;
+	background-color: var(--mediumGray);
+	justify-items: center;
+	align-items: center;
+	border: 2px solid var(--darkBlue);
+	color: var(--white);
+	padding: 2%;
+	font-size: 70%;	
+}
+
+.PostUser img {
+	max-width: 30px;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+	
+}
+
+.PostTitle * {
+	text-decoration: none;
+	color: var(--white);
+	
+}
+
+.PostTitle {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font_Oswald);
+}
+
+.PostUserSection {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: flex-start;
+	color: var(--white);
+	background-color: var(--darkGray);
+	font-size: 70%;
+	border: 1px solid var(--black);
+	
+}
+.PostUserSection *{
+	margin: 0px
+}
+
+.PostUserSection img {
+	border: 1px solid var(--lightGray);
+	width: 60px;
+	aspect-ratio: 1/1;
+	object-fit: cover;
+}
+
+.Social {
+	width: 100%;
+}
+
+.TopicDashboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	color: white;
+	background-color: var(--darkGray);
+	border: 1px solid var(--mediumGray);
+	font-size: 150%;
+
+
+}
+
+.TopicDashboard a {
+	font-family: var(--font_Oswald);
+	color: var(--white);
+	text-decoration: none;
+	font-weight: lighter;
+	font-size: 20px;
+	text-align: left;
+}
+
+.TopicDashboard th,
+td {
+	padding: 1%;
+	text-align: left;
+}
+
+
+
+.userIcon {
+	color: var(--lightGray);
+}
+
+.userInfo {
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	grid-template-columns: auto auto;
+	align-items: flex-start;
+    justify-content: center;
+	
+	font-size: 50%;
+	border: 1px solid var(--darkGray);
+	
+}
+
+.userInfo *{
+	margin: 0px;
+}
+
+.userInfo a {
+	color: var(--white);
+	font-family: 'Oswald', sans;
+}
+
+
+.UserDashboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border: 1px solid var(--black);
+	background-color: var(--darkGray);
+
+	color: var(--white);
+	font-family: 'Oswald', sans;
+	font-size: 90%;
+
+}
+.UserDashboard table{
+	width: 100%;
+	border-collapse: collapse;
+
+}
+
+.UserDashboard th{
+	width: fit-content;
+	text-align: center;
+	border: 1px solid var(--darkGray);
+
+	font-family: var(--font_Oswald);
+	text-shadow: 1px 1px black;	
+}
+
+.UserDashboard tr:nth-child(even) {
+	background-color: var(--darkGray);
+}
+
+.UserDashboard th,
+tr:nth-child(odd) {
+	background-color: var(--mediumGray);
+}
+
+.UserDashboard h2 {
+	background-color: var(--darkBlue);
+	width: 100%;
+	text-align: center;
+}
+
+@keyframes paddingOut {
+	from {
+		padding: 0.5%;
+	}
+
+	to {
+		padding: 1%;
+	}
+}
+
+@keyframes paddingIn {
+	from {
+		padding: 1%;
+	}
+
+	to {
+		padding: 0.5%;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0
+	}
+
+	to {
+		opacity: 100%
+	}
+
+}

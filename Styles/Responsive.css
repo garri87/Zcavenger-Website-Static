@@ -1,0 +1,132 @@
+
+/*
+Mobile Screen
+*/
+@media screen and (max-width: 600px) {
+
+
+	.NavigationBox,
+	nav {
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+		align-items: stretch;
+	}
+
+	.NavigationButton, .DownloadButton{
+		width: 100%;
+	}
+
+	.defaultBox {
+		max-width: 95%;
+		height: fit-content;
+	}
+
+	.defaultBox iframe {
+		width: 100%;
+		height: 90%;
+
+	}
+
+	.Social {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.dropdown {
+		position: absolute;
+		display: inline-block;
+		top: 5px;
+		right: 10px;
+	}
+
+	.Row-Box-2{
+		display:flex; 
+		flex-direction: column;
+		
+		align-items: center;
+		
+	}
+	.Row-Box-2 div{
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+
+}
+
+/*
+Monitor Screen
+*/
+@media screen and (min-width: 600px) {
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+		text-align: center;
+	}
+
+
+
+	.MainBanner{
+		grid-area: MainBanner;
+	}
+
+	.Nav{
+		grid-area: Nav;
+	}
+
+	.NavigationBox {
+		display: grid;
+		grid-template-columns: 20% auto;
+		align-items: center;
+		
+		padding: 1%;
+	}
+
+	.defaultBox {
+		max-width: 99%;
+	}
+
+	.defaultBox iframe {
+		width: 100%;
+		height: 50vh;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	
+	}
+
+
+	.Row-Box-2{
+		display:flex; 
+		flex-direction: row;
+		gap: 1%; 
+		margin: 1%
+	}
+
+
+	.Social {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	footer {
+		display: grid;
+		grid-template-columns: 70% auto;
+		align-items: center;
+	}
+
+
+}
