@@ -19,7 +19,7 @@ function landing(){
     <div class= "Row-Box-2">
         <div class="defaultBox">
             <h2 id="defaultBoxTitle">About The Game</h2>
-            <p>Welcome to the official page of Zcavenger, a zombie survival game with roguelike, shooter and platform elements. The game is in alpha stage of development with many features to add and that I will be reporting through the <a href="development.html">development</a> section.
+            <p>Welcome to the official page of Zcavenger, a zombie survival game with roguelike, shooter and platform elements. The game is in alpha stage of development with many features to add and that I will be reporting through the <a onclick= "development()">development</a> section.
             I hope you enjoy my first game!</p>
             <br>
             <p>Sincerely</p>
