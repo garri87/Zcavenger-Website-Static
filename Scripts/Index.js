@@ -16,6 +16,9 @@ function landing(){
                 class="NavigationButton" target="_blank">Patch Notes</a>
         </div>
     </div>
+    
+    
+    
     <div class= "Row-Box-2">
         <div class="defaultBox">
             <h2 id="defaultBoxTitle">About The Game</h2>
@@ -33,7 +36,10 @@ function landing(){
                 allowfullscreen>
             </iframe>
         </div>
-    </div>`;
+    </div>
+    
+    
+    `;
 }
 function development() {
     document.getElementById("Content").innerHTML = `
